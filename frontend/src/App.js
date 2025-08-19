@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { healthCheck, scanCode } from './api';
+import './App.css';
 import CodeInput from './components/CodeInput';
 import ScanResults from './components/ScanResults';
-import { scanCode, healthCheck } from './api';
-import './App.css';
 
 function App() {
   const [scanResults, setScanResults] = useState(null);
@@ -155,7 +155,7 @@ function App() {
                 </h3>
                 <div className="mt-2 text-sm text-yellow-700">
                   <p>
-                    The backend scanning service is currently offline. Please make sure the Spring Boot backend is running on localhost:8080.
+                    The backend scanning service is currently offline. Please make sure the Spring Boot backend is running on localhost:8085.
                   </p>
                 </div>
               </div>
