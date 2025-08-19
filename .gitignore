@@ -1,0 +1,222 @@
+# ===============================================
+# Code Guardian - Git Ignore Configuration
+# ===============================================
+
+# IDE and Editor Files
+# ---------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+.factorypath
+.sonarlint/
+.metadata/
+
+# Operating System Files
+# ----------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===============================================
+# BACKEND (Spring Boot / Maven)
+# ===============================================
+
+# Maven Build Output
+backend/target/
+backend/.mvn/timing.properties
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Maven Logs
+backend/maven.log
+backend/dependency-reduced-pom.xml
+
+# Spring Boot Logs
+backend/logs/
+backend/*.log
+backend/spring.log
+
+# Application Properties (if containing secrets)
+# backend/src/main/resources/application-local.properties
+# backend/src/main/resources/application-secrets.properties
+
+# IDE Generated Files
+backend/bin/
+backend/.apt_generated
+backend/.apt_generated_tests
+
+# ===============================================
+# FRONTEND (React / Node.js)  
+# ===============================================
+
+# Dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# Production Build
+frontend/build/
+frontend/dist/
+
+# Environment Files (LOCAL ONLY - keep .env.example)
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Runtime Files
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Testing Coverage
+frontend/coverage/
+
+# ESLint Cache
+frontend/.eslintcache
+
+# ===============================================
+# ROOT LEVEL EXCLUSIONS
+# ===============================================
+
+# Node modules (if any in root)
+node_modules/
+
+# Log Files
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Package Files
+*.tgz
+*.tar.gz
+
+# Runtime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage Directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Environment variables file (LOCAL ONLY)
+.env.local
+.env.*.local
+
+# ===============================================
+# DEPLOYMENT & BUILD ARTIFACTS
+# ===============================================
+
+# Generated documentation
+docs/build/
+
+# Compiled Java class files
+*.class
+
+# JAR files (except wrapper jar)
+*.jar
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# WAR files
+*.war
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# ===============================================
+# SENSITIVE INFORMATION
+# ===============================================
+
+# SSL Certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files with potential secrets
+config/local.json
+config/secrets.json
+
+# ===============================================
+# DEVELOPMENT & TESTING
+# ===============================================
+
+# Test Results
+test-results/
+junit.xml
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# ===============================================
+# PLATFORM SPECIFIC
+# ===============================================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# ===============================================
+# DOCUMENTATION GENERATION
+# ===============================================
+
+# PDF generation temporary files
+*.pdf.tmp
+.pdf-temp/

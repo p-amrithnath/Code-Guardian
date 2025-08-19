@@ -1,0 +1,24 @@
+{
+    "name": "code-guardian-pdf-generator",
+    "version": "1.0.0",
+    "description": "PDF generator for Code Guardian technical documentation",
+    "main": "generate-pdf.js",
+    "scripts": {
+        "generate-pdf": "node generate-pdf.js",
+        "install-deps": "npm install marked puppeteer",
+        "setup": "npm run install-deps && npm run generate-pdf"
+    },
+    "dependencies": {
+        "marked": "^9.1.6",
+        "puppeteer": "^21.5.2"
+    },
+    "keywords": [
+        "pdf",
+        "documentation",
+        "markdown",
+        "puppeteer",
+        "code-guardian"
+    ],
+    "author": "Code Guardian Team",
+    "license": "MIT"
+}

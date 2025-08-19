@@ -1,0 +1,30 @@
+{
+  "name": "code-guardian",
+  "version": "1.0.0",
+  "description": "Code Guardian - Lightweight code security scanner",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev:frontend",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && .\\mvnw.cmd spring-boot:run",
+    "dev:both": "start cmd /k \"cd backend && .\\mvnw.cmd spring-boot:run\" && timeout /t 5 > nul && cd frontend && npm start",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && .\\mvnw.cmd clean package",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test -- --coverage --watchAll=false",
+    "test:backend": "cd backend && .\\mvnw.cmd test",
+    "clean": "cd frontend && rmdir /s /q node_modules build 2>nul & cd .. && cd backend && .\\mvnw.cmd clean"
+  },
+  "keywords": [
+    "security",
+    "code-scanner",
+    "spring-boot",
+    "react"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^16.1.2",
+    "puppeteer": "^24.16.0"
+  }
+}
