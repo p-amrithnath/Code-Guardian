@@ -1,6 +1,6 @@
 # Multi-stage Docker build for Spring Boot application
 # Stage 1: Build the application
-FROM maven:3.9.4-openjdk-17 AS build
+FROM maven:3.9-openjdk-17 AS build
 
 # Set working directory
 WORKDIR /app
@@ -26,6 +26,9 @@ FROM openjdk:17-jdk-slim
 
 # Set working directory
 WORKDIR /app
+
+# Install curl for health checks
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Create a non-root user for security
 RUN useradd --create-home --shell /bin/bash appuser
