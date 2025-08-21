@@ -1,6 +1,20 @@
 # Multi-stage Docker build for Spring Boot application
 # Stage 1: Build the application
-FROM maven:3.9-openjdk-17 AS build
+FROM openjdk:17-jdk-slim AS build
+
+# Install Maven
+RUN apt-get update && \
+    apt-get install -y wget && \
+    wget https://archive.apache.org/dist/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.tar.gz && \
+    tar -xzf apache-maven-3.9.5-bin.tar.gz && \
+    mv apache-maven-3.9.5 /opt/maven && \
+    rm apache-maven-3.9.5-bin.tar.gz && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set Maven environment variables
+ENV MAVEN_HOME=/opt/maven
+ENV PATH=$MAVEN_HOME/bin:$PATH
 
 # Set working directory
 WORKDIR /app
