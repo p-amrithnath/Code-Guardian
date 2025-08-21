@@ -155,7 +155,7 @@ function App() {
                 </h3>
                 <div className="mt-2 text-sm text-yellow-700">
                   <p>
-                    The backend scanning service is currently offline. Please make sure the Spring Boot backend is running on localhost:8085.
+                    The backend scanning service is currently offline. Please make sure the  backend is running .
                   </p>
                 </div>
               </div>
